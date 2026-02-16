@@ -4,6 +4,7 @@ import '../styles/LandingPage.css';
 
 const LandingPage = () => {
   const [isNavActive, setIsNavActive] = useState(false);
+  const [isFaqOpen, setIsFaqOpen] = useState(-1);
   const navRef = useRef(null);
 
   const toggleNav = () => {
@@ -206,33 +207,36 @@ const LandingPage = () => {
         </section>
 
         {/* FAQ */}
-        <section className="faq">
-          <div className="faq-dots">
-            <div className="dot"></div>
-            <div className="dot"></div>
-            <div className="dot"></div>
-          </div>
+        <section className="faq" id="faq">
           <article className="faq-content">
-            <h3>What causes Erectile Dysfunction?</h3>
-            <p>Erectile dysfunction (ED) occurs when a man has trouble getting or maintaining an erection firm
-              enough for sexual activity. This typically results from insufficient blood flow to the penis.
-              However, there are many possible factors that can cause ED, including: physical factors such as
-              cardiovascular conditions; diabetes and high blood pressure; psychological factors such as
-              stress, anxiety or depression; lifestyle choices such as smoking, excessive alcohol consumption
-              and drug use; hormonal imbalances; neurological conditions; age; and medications. It is
-              important that you share all of these details with your medical provider before requesting
-              treatment.</p>
-
-            <h3>How does sildenafil citrate work?</h3>
-            <p>Sildenafil Citrate (generic Viagra®)* works by blocking PDE5 (phosphodiesterase type 5), an
-              enzyme in the body that breaks down the chemicals responsible for blood flow (and therefore
-              erections). The result is increased blood flow to the penis to help a man get and keep an
-              erection.</p>
-
-            <h3>How does tadalafil work?</h3>
-            <p>Tadalafil (generic Cialis®)** works by blocking PDE5 (phosphodiesterase type 5), an enzyme in the
-              body that breaks down chemicals responsible for blood flow (and therefore erections). The result
-              is increased blood flow to the penis to help a man get and keep an erection.</p>
+            {[
+              {
+                question: "What causes Erectile Dysfunction?",
+                answer: "Erectile dysfunction (ED) occurs when a man has trouble getting or maintaining an erection firm enough for sexual activity. This typically results from insufficient blood flow to the penis. However, there are many possible factors that can cause ED, including: physical factors such as cardiovascular conditions; diabetes and high blood pressure; psychological factors such as stress, anxiety or depression; lifestyle choices such as smoking, excessive alcohol consumption and drug use; hormonal imbalances; neurological conditions; age; and medications. It is important that you share all of these details with your medical provider before requesting treatment."
+              },
+              {
+                question: "How does sildenafil citrate work?",
+                answer: "Sildenafil Citrate (generic Viagra®)* works by blocking PDE5 (phosphodiesterase type 5), an enzyme in the body that breaks down the chemicals responsible for blood flow (and therefore erections). The result is increased blood flow to the penis to help a man get and keep an erection."
+              },
+              {
+                question: "How does tadalafil work?",
+                answer: "Tadalafil (generic Cialis®)** works by blocking PDE5 (phosphodiesterase type 5), an enzyme in the body that breaks down chemicals responsible for blood flow (and therefore erections). The result is increased blood flow to the penis to help a man get and keep an erection."
+              }
+            ].map((faq, index) => (
+              <div key={index} className={`faq-item ${isFaqOpen === index ? 'open' : ''}`}>
+                <div className="faq-header" onClick={() => setIsFaqOpen(isFaqOpen === index ? -1 : index)}>
+                  <div className="faq-arrow">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9 18L15 12L9 6" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </div>
+                  <h3>{faq.question}</h3>
+                </div>
+                <div className="faq-answer">
+                  <p>{faq.answer}</p>
+                </div>
+              </div>
+            ))}
           </article>
         </section>
 
@@ -252,8 +256,28 @@ const LandingPage = () => {
           </div>
           <div className="footer-section footer-socials">
             <h3>SOCIALS</h3>
-            <img src="https://api.builder.io/api/v1/image/assets/e8bee67e021d48bba07492581bef02e4/94c0be180846570471dfed4e8e747e6e0e0f0524?placeholderIfAbsent=true"
-              alt="Social media links" />
+            <div className="social-links">
+              <a href="#" className="social-btn facebook" aria-label="Facebook">
+                <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 22 12.06C22 6.53 17.5 2.04 12 2.04Z" />
+                </svg>
+              </a>
+              <a href="#" className="social-btn instagram" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9M18,5A1,1 0 0,1 19,6A1,1 0 0,1 18,7A1,1 0 0,1 17,6A1,1 0 0,1 18,5Z" />
+                </svg>
+              </a>
+              <a href="#" className="social-btn x-twitter" aria-label="X (Twitter)">
+                <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
+                </svg>
+              </a>
+              <a href="#" className="social-btn tiktok" aria-label="TikTok">
+                <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" />
+                </svg>
+              </a>
+            </div>
           </div>
         </footer>
       </div>
