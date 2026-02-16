@@ -825,6 +825,9 @@ footer {
 .footer-links,
 .footer-socials {
     color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .social-links {
@@ -833,7 +836,7 @@ footer {
     margin-top: 12px;
 }
 
-.social-btn {
+.footer-social-btn {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -847,13 +850,13 @@ footer {
     transition: all 0.3s ease;
 }
 
-.social-btn:hover {
+.footer-social-btn:hover {
     background-color: rgba(255, 255, 255, 0.3) !important;
     transform: translateY(-2px);
     border-color: white !important;
 }
 
-.social-btn svg {
+.footer-social-btn svg {
     width: 24px;
     height: 24px;
     fill: currentColor;
@@ -1153,6 +1156,13 @@ footer {
     .footer-section {
         width: 100%;
         margin-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .social-links {
+        justify-content: center;
     }
 
 

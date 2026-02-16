@@ -1,5 +1,7 @@
+'use client';
+
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import '../styles/CreateAccountPage.css';
 
 const CreateAccountPage = () => {
@@ -34,7 +36,7 @@ const CreateAccountPage = () => {
                 <button className="social-btn">continue with google</button>
                 <button className="social-btn">continue with apple</button>
 
-                <Link to="/login" className="create-account">Already have an account? log in</Link>
+                <Link href="/login" className="create-account">Already have an account? log in</Link>
             </div>
         </div>
     );

@@ -1,5 +1,7 @@
+'use client';
+
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import '../styles/LoginPage.css';
 
 const LoginPage = () => {
@@ -26,10 +28,10 @@ const LoginPage = () => {
                     </div>
 
                     <div className="forgot-password">
-                        <Link to="/forgot-password">Forgot your password?</Link>
+                        <Link href="/forgot-password">Forgot your password?</Link>
                     </div>
 
-                    <button type="submit" class="auth-login-btn">Log in</button>
+                    <button type="submit" className="auth-login-btn">Log in</button>
                 </form>
 
                 <div className="divider">
@@ -39,7 +41,7 @@ const LoginPage = () => {
                 <button className="social-btn">continue with google</button>
                 <button className="social-btn">continue with apple</button>
 
-                <Link to="/create-account" className="create-account">First time here? create an account</Link>
+                <Link href="/create-account" className="create-account">First time here? create an account</Link>
             </div>
         </div>
     );

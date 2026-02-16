@@ -1,5 +1,7 @@
+'use client';
+
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import '../styles/ForgotPasswordPage.css';
 
 const ForgotPasswordPage = () => {
@@ -18,7 +20,7 @@ const ForgotPasswordPage = () => {
                 </form>
 
                 <div className="back-to-login">
-                    Remember your password? <Link to="/login">Back to log in</Link>
+                    Remember your password? <Link href="/login">Back to log in</Link>
                 </div>
             </div>
         </div>
