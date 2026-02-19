@@ -1,0 +1,187 @@
+/* src/styles/QuestionPage.css */
+
+.question-page-container {
+    min-height: 100vh;
+    background-color: #e5e7eb;
+    /* Light grey background */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    font-family: 'Inter', sans-serif;
+    /* Assuming Inter or similar sans-serif */
+}
+
+/* Progress Bar Section */
+.progress-container {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    position: relative;
+    padding-top: 20px;
+}
+
+.progress-bar-bg {
+    flex: 1;
+    height: 4px;
+    background-color: #9ca3af;
+    /* Grey line */
+    border-radius: 2px;
+    margin-right: 15px;
+}
+
+.progress-step-indicator {
+    width: 30px;
+    height: 30px;
+    background-color: #d1d5db;
+    /* Light grey circle */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #000;
+    font-size: 14px;
+}
+
+/* Question Content */
+.question-content {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.question-title {
+    font-size: 18px;
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+/* Option Buttons */
+.option-btn {
+    width: 100%;
+    padding: 15px 20px;
+    background-color: #ff0000;
+    /* Bright Red */
+    border: none;
+    border-radius: 12px;
+    /* Rounded corners */
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.1s ease;
+    text-align: left;
+}
+
+.option-btn:hover {
+    transform: scale(1.02);
+}
+
+.option-radio {
+    width: 24px;
+    height: 24px;
+    background-color: white;
+    border-radius: 50%;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.option-text {
+    color: #000;
+    /* Black text on Red background */
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/* Selected State (Optional visual feedback) */
+.option-btn.selected {
+    box-shadow: 0 0 0 3px #000;
+    /* Thicker border for selected state */
+    transform: scale(1.02);
+}
+
+/* Checkbox specific (allow multiple) */
+.option-btn.checkbox-selected {
+    box-shadow: 0 0 0 3px #000;
+}
+
+/* Text Inputs and Textarea */
+.input-text,
+.input-email,
+.input-select,
+.input-textarea {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
+    font-size: 16px;
+    font-family: inherit;
+    background-color: white;
+    box-sizing: border-box;
+    /* Ensure padding doesn't affect width */
+}
+
+.input-textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.input-text:focus,
+.input-email:focus,
+.input-select:focus,
+.input-textarea:focus {
+    outline: none;
+    border-color: #ff0000;
+}
+
+/* Navigation Buttons Container */
+.navigation-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 40px;
+    width: 100%;
+    max-width: 600px;
+}
+
+/* Base Button Style */
+.next-btn,
+.prev-btn {
+    flex: 1;
+    /* Equal width */
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+/* Next Button */
+.next-btn {
+    background-color: #000;
+    color: white;
+}
+
+/* Previous Button */
+.prev-btn {
+    background-color: #000;
+    color: white;
+}
+
+.prev-btn:hover {
+    background-color: #333;
+    /* Dark grey on hover */
+}
+
+/* Next Button Disabled State */
+.next-btn:disabled {
+    background-color: #9ca3af;
+    cursor: not-allowed;
+}

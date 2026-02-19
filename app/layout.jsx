@@ -3,6 +3,7 @@ import '../src/styles/LandingPage.css';
 import '../src/styles/LoginPage.css';
 import '../src/styles/CreateAccountPage.css';
 import '../src/styles/ForgotPasswordPage.css';
+import '../src/styles/QuestionPage.css';
 
 export const metadata = {
     title: 'TheraTeam',
