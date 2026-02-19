@@ -2,12 +2,18 @@
 
 import React, { useEffect, useState, useRef } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import '../styles/LandingPage.css';
 
 const LandingPage = () => {
   const [isNavActive, setIsNavActive] = useState(false);
   const [isFaqOpen, setIsFaqOpen] = useState(-1);
   const navRef = useRef(null);
+  const router = useRouter();
+
+  const handleStartNow = () => {
+    router.push('/question');
+  };
 
   const toggleNav = () => {
     setIsNavActive(!isNavActive);
@@ -65,8 +71,8 @@ const LandingPage = () => {
           <div className="hero-left">
             <h2>Get Erectile dysfunction<br />Treatment fast</h2>
             <div className="hero-buttons">
-              <button className="btn-primary">Start Now</button>
-              <button className="btn-secondary">See If This Is Right For Me</button>
+              <button className="btn-primary" onClick={handleStartNow}>Start Now</button>
+              <button className="btn-secondary" onClick={handleStartNow}>See If This Is Right For Me</button>
             </div>
           </div>
           <div className="hero-right">
@@ -111,7 +117,7 @@ const LandingPage = () => {
             </div>
             <img src="https://api.builder.io/api/v1/image/assets/e8bee67e021d48bba07492581bef02e4/28c1944a0cea450e729863f83515f83879d5f8d7?placeholderIfAbsent=true"
               alt="Blaze treatment product" />
-            <button className="btn-card">Start Now</button>
+            <button className="btn-card" onClick={handleStartNow}>Start Now</button>
           </article>
           <article className="product-card">
             <div className="product-card-header">
@@ -119,14 +125,14 @@ const LandingPage = () => {
             </div>
             <img src="https://api.builder.io/api/v1/image/assets/e8bee67e021d48bba07492581bef02e4/28c1944a0cea450e729863f83515f83879d5f8d7?placeholderIfAbsent=true"
               alt="Daily tadalafil treatment product" />
-            <button className="btn-card">Start Now</button>
+            <button className="btn-card" onClick={handleStartNow}>Start Now</button>
           </article>
         </section>
 
         {/* CTA Section */}
         <section className="cta-section">
           <h2>Better sex with fast acting, long lasting Tadalafill</h2>
-          <button>Get Started</button>
+          <button onClick={handleStartNow}>Get Started</button>
         </section>
 
         {/* How It Works */}
@@ -164,7 +170,7 @@ const LandingPage = () => {
             </article>
           </div>
           <p className="how-info">Get unlimited access to your doctor, support groups, and more</p>
-          <button className="btn-start">Start Now</button>
+          <button className="btn-start" onClick={handleStartNow}>Start Now</button>
         </section>
 
         {/* Clinical Lead */}
