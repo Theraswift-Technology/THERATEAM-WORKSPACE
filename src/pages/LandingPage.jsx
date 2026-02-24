@@ -265,22 +265,22 @@ const LandingPage = () => {
           <div className="footer-section footer-socials">
             <h3>SOCIALS</h3>
             <div className="social-links">
-              <a href="#" className="footer-social-btn facebook" aria-label="Facebook">
+              <a href="https://www.facebook.com/share/18Gj3zAfdQ/" target="_blank" rel="noopener noreferrer" className="footer-social-btn facebook" aria-label="Facebook">
                 <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 22 12.06C22 6.53 17.5 2.04 12 2.04Z" />
                 </svg>
               </a>
-              <a href="#" className="footer-social-btn instagram" aria-label="Instagram">
+              <a href="https://www.instagram.com/theraswiftcares?igsh=MTRrY3NuNGtyeGpkdQ==" target="_blank" rel="noopener noreferrer" className="footer-social-btn instagram" aria-label="Instagram">
                 <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                   <path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9M18,5A1,1 0 0,1 19,6A1,1 0 0,1 18,7A1,1 0 0,1 17,6A1,1 0 0,1 18,5Z" />
                 </svg>
               </a>
-              <a href="#" className="footer-social-btn x-twitter" aria-label="X (Twitter)">
+              <a href="https://x.com/Theraswiftcare" target="_blank" rel="noopener noreferrer" className="footer-social-btn x-twitter" aria-label="X (Twitter)">
                 <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                   <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
                 </svg>
               </a>
-              <a href="#" className="footer-social-btn tiktok" aria-label="TikTok">
+              <a href="https://www.tiktok.com/@theraswift?_r=1&_t=ZS-93pptYlpdjx" target="_blank" rel="noopener noreferrer" className="footer-social-btn tiktok" aria-label="TikTok">
                 <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                   <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" />
                 </svg>
